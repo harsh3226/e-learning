@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Classes</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="stylesheet" type="text/css" href="/css/kickstart.css" media="all" />
+		             
+
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		  <script src="https://apis.google.com/js/api:client.js"></script>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		                  <!-- CUSTOM STYLES -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="kickstart.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap-social.css" media="all" />
+	</head>
+	<body>
+		<ul class="menu">
+		<li class="current"><a href="/">Home</a></li>
+		<!-- <li><a href="/classes">Classes</a></li> -->
+		</ul>
+		<div class="container">
+	  	<div class="row">
+	  		<div class="col-9 ">
+		<h3>Classes</h3>
+		<% for(var i=0;i<dool.length;i++){ %>
+			<!-- <%var y=dool[i]._id%> -->
+		  <div class=" block ">
+				<h4><%=dool[i].title%></h4>
+		   <!-- // <p><%=dool[i].description%></p> -->
+				<p><strong><%=dool[i].instructor%></strong></p>
+			<!-- //	<p><%=y%></p> -->
+		    <a class="button" href="/classes/<%=dool[i].title%>/details/">Class Details</a>
+		</div>
+		<%}%>
+</div>
+
+<div class="col-3">
+	<h4>Welcome Back</h4>
+	<!-- <p><%=info.type%></p> -->
+	<p><a class="button" href="/<%=info.type%>s/classes">My Classes</a></p>
+ <p><a class="button" href="/logout">Logout</a></p>
+</div>
+
+
+
+</div>
+	</div>
+
+
+	<div class="clear"></div>
+	<div id="footer">
+	&copy; Copyright 2019 All Rights Reserved.Made by Harsh Singhal
+	</div>
+
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1641401-6']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+
+	</body></html>
